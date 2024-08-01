@@ -5,6 +5,7 @@ import TodoCreate from './todo/TodoCreate';
 import Cart from './shopping/Cart';
 import Note from './note/Note';
 import Weather from './weather/Weather';
+import FormValidation from './form/FormValidation';
 
 const Main = () => {
     const [active, setActive] = useState(1);
@@ -26,7 +27,7 @@ const Main = () => {
             case 5:
                 return <Weather />;
             case 6:
-                return <Counter />;
+                return <FormValidation />;
             case 7:
                 return <Counter />;
             default:

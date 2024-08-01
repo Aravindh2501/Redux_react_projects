@@ -8,6 +8,14 @@ $blue: #1a66eb;
 $green: #2ecc71;
 $light-grey: #f0f0f0;
 $dark-grey: #444;
+$form-background: #f9f9f9;
+$form-card-background: #ffffff;
+$form-border-radius: 8px;
+$form-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$form-padding: 16px;
+$form-margin: 16px;
+$label-color: #333;
+$error-color: #e74c3c;
 
 * {
     margin: 0;
@@ -282,13 +290,12 @@ a {
         width: 40rem;
         padding: 20px;
         transition: transform 0.2s;
-        position: relative; // For positioning message
+        position: relative;
 
         &:hover {
             transform: scale(1.02);
         }
 
-        // Message styling
         p.message {
             position: absolute;
             top: 10px;
@@ -466,5 +473,104 @@ a {
             font-size: 24px;
             color: $dark-grey;
         }
+    }
+}
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+}
+
+.form_card {
+    background-color: $form-card-background;
+    border-radius: $form-border-radius;
+    box-shadow: $form-shadow;
+    padding: $form-padding;
+    margin: $form-margin;
+    width: 100%;
+    max-width: 500px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #3498db;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 4px;
+        color: $label-color;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="time"],
+    input[type="date"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: $form-border-radius;
+        margin-bottom: 12px;
+        font-size: 14px;
+
+        &:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+    .error {
+        color: $error-color;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+    }
+
+    button {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        border-radius: $form-border-radius;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        transition: background-color 0.3s, transform 0.2s;
+
+        &:hover {
+            background-color: #2980b9;
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.form_data_card {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: $form-border-radius;
+    box-shadow: $form-shadow;
+    padding: $form-padding;
+
+    pre {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: $form-border-radius;
+        overflow-x: auto;
     }
 }
