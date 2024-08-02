@@ -13,15 +13,13 @@ const BlogCreate = ({ blog, resetEdit }) => {
     const [message, setMessage] = useState("");
     const dispatch = useDispatch();
 
-    // Define resetForm using useCallback
     const resetForm = useCallback(() => {
         setBlogData({ title: '', description: '', category: '', image: null });
         setImagePreview('');
         setMessage('');
-        resetEdit(); // Clear the edit state
+        resetEdit();
     }, [resetEdit]);
 
-    // Use resetForm in useEffect
     useEffect(() => {
         if (blog) {
             setBlogData(blog);
@@ -31,7 +29,7 @@ const BlogCreate = ({ blog, resetEdit }) => {
         } else {
             resetForm();
         }
-    }, [blog, resetForm]); // Make sure resetForm is in the dependency array
+    }, [blog, resetForm]);
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
