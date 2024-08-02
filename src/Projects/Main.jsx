@@ -6,6 +6,7 @@ import Cart from './shopping/Cart';
 import Note from './note/Note';
 import Weather from './weather/Weather';
 import FormValidation from './form/FormValidation';
+import BlogMain from './blog/BlogMain';
 
 const Main = () => {
     const [active, setActive] = useState(1);
@@ -29,7 +30,7 @@ const Main = () => {
             case 6:
                 return <FormValidation />;
             case 7:
-                return <Counter />;
+                return <BlogMain />;
             default:
                 return <Counter />;
         }

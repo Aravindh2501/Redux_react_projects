@@ -574,3 +574,184 @@ a {
         overflow-x: auto;
     }
 }
+
+
+.blog_main {
+    // background-color: $form-background;
+    // padding: 20px;
+    // border-radius: $form-border-radius;
+    // box-shadow: $form-shadow;
+    // margin: 20px;
+
+    .blog_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h5 {
+            color: $black;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        div {
+            button {
+                margin-left: 10px;
+                background-color: $blue;
+                color: $white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($blue, 10%);
+                }
+            }
+        }
+    }
+}
+
+
+
+.blogs_create {
+    .blog_card {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        form {
+            div {
+                margin-bottom: 15px;
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    color: black;
+                }
+
+                input[type="text"],
+                textarea,
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+
+                    &:focus {
+                        border-color: #1a66eb;
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    resize: vertical;
+                    height: 100px;
+                }
+
+                .error-message {
+                    color: red;
+                    font-size: 0.9em;
+                    margin-top: 5px;
+                }
+            }
+
+            button {
+                background-color: #1a66eb;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken(#1a66eb, 10%);
+                }
+            }
+        }
+    }
+
+    .image-preview {
+        margin-top: 20px;
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+.blog_show {
+    h2 {
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            width: 20rem;
+            border-radius: 16px;
+            padding: 1rem;
+
+            h3 {
+                color: black;
+            }
+
+            p {
+                color: grey;
+                margin: 12px 0;
+            }
+
+            .edit-button,
+            .delete-button {
+                margin-right: 10px;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &.edit-button {
+                    background-color: #1a66eb;
+                    color: white;
+                }
+
+                &.delete-button {
+                    background-color: #ff6b6b;
+                    color: white;
+                }
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+
+            .blog-image {
+                max-width: 100%;
+                height: 12rem;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
